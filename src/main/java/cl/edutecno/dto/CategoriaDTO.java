@@ -24,5 +24,5 @@ public class CategoriaDTO {
 	public String toString() {
 		return "CategoriaDTO [idCategoria=" + idCategoria + ", nombreCategoria=" + nombreCategoria + "]";
 	}
-
+	
 }
