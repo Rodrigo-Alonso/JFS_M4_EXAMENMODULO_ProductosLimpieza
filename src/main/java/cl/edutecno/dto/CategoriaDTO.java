@@ -22,7 +22,7 @@ public class CategoriaDTO {
 	//toString
 	@Override
 	public String toString() {
-		return "CategoriaDTO [idCategoria=" + idCategoria + ", nombreCategoria=" + nombreCategoria + "]";
+		return "CategoriaDTO [idCategoria=" + idCategoria + ", nombreCategoria=" + nombreCategoria + "]\n";
 	}
 	
 }

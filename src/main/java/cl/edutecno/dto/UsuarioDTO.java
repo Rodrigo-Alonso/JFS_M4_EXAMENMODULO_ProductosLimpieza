@@ -44,7 +44,7 @@ public class UsuarioDTO {
 	@Override
 	public String toString() {
 		return "UsuarioDTO [idUsuario=" + idUsuario + ", nombreUsuario=" + nombreUsuario + ", correoUsuario="
-				+ correoUsuario + ", telefonoUsuario=" + telefonoUsuario + ", PassUsuario=" + PassUsuario + "]";
+				+ correoUsuario + ", telefonoUsuario=" + telefonoUsuario + ", PassUsuario=" + PassUsuario + "]\n";
 	}
 	
 }

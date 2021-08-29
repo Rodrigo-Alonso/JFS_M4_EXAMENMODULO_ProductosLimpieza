@@ -52,7 +52,7 @@ public class ProductoDTO {
 	public String toString() {
 		return "ProductoDTO [idProducto=" + idProducto + ", nombreProducto=" + nombreProducto + ", precioProducto="
 				+ precioProducto + ", descripcionProducto=" + descripcionProducto + ", idCategoria=" + idCategoria
-				+ ", idUsuario=" + idUsuario + "]";
+				+ ", idUsuario=" + idUsuario + "]\n";
 	}
 	
 }

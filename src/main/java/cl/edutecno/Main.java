@@ -1,6 +1,7 @@
 package cl.edutecno;
 
 import cl.edutecno.dto.ProductoDTO;
+import cl.edutecno.dto.UsuarioDTO;
 import cl.edutecno.facade.Facade;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Facade facade = new Facade();
 
-		ProductoDTO dto = new ProductoDTO();
+//		ProductoDTO dto = new ProductoDTO();
 
 		// Agregar nuevo producto
 //		dto.setNombreProducto("Producto 1");
@@ -36,8 +37,25 @@ public class Main {
 //		System.out.println(facade.borrarProducto(dto));
 		
 		//Obtener listado de elementos
-		System.out.println(facade.listarProductos());
+//		System.out.println(facade.listarProductos());
 		
+		//USUARIO DAO
+		
+		UsuarioDTO dto = new UsuarioDTO();
+		
+		//Agregar Usuario
+//		dto.setNombreUsuario("Usuario 3");
+//		dto.setCorreoUsuario("usuario3@mail.com");
+//		dto.setTelefonoUsuario("+56977894758");
+//		dto.setPassUsuario("YTREWQ");
+//		
+//		System.out.println(facade.registrarUsuario(dto));
+		
+		//Cambiar Pass Usuario
+		dto.setPassUsuario("nuevaClaveSegura");
+		dto.setCorreoUsuario("usuario2@mail.com");
+		
+		System.out.println(facade.cambiarPassUsuario(dto));
 	}
 
 }
