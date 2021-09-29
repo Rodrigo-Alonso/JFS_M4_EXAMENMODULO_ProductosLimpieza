@@ -13,7 +13,7 @@ public class ProductoDAO extends AdministradorConexion {
 
 	// Constructor
 	public ProductoDAO() {
-		Connection conn = generaConexion();
+		Connection conn = generaPoolConexion();
 	}
 
 	public int save(ProductoDTO productoDTO) {
@@ -113,7 +113,5 @@ public class ProductoDAO extends AdministradorConexion {
 		return listaProductos;
 		
 	}
-	
-	
 
 }

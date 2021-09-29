@@ -52,10 +52,14 @@ public class Main {
 //		System.out.println(facade.registrarUsuario(dto));
 		
 		//Cambiar Pass Usuario
-		dto.setPassUsuario("nuevaClaveSegura");
-		dto.setCorreoUsuario("usuario2@mail.com");
+//		dto.setPassUsuario("nuevaClaveSegura");
+//		dto.setCorreoUsuario("usuario2@mail.com");
+//		
+//		System.out.println(facade.cambiarPassUsuario(dto));
 		
-		System.out.println(facade.cambiarPassUsuario(dto));
+		//Obtener usuario con correo
+		dto.setCorreoUsuario("usuario@mail.com");
+		System.out.println(facade.obtenerUsuarioByEmail(dto.getCorreoUsuario()));
 	}
 
 }

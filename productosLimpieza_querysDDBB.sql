@@ -25,3 +25,14 @@ SELECT * FROM USUARIO;
 SELECT * FROM PRODUCTO;
 
 DELETE FROM PRODUCTO WHERE ID_PRODUCTO=2;
+SELECT * FROM USUARIO WHERE CORREO_USUARIO="usuario@mail.com";
+
+INSERT INTO CATEGORIA VALUES (1, "Detergentes");
+INSERT INTO CATEGORIA VALUES (2, "Shampoos");
+INSERT INTO CATEGORIA VALUES (3, "Jabones");
+INSERT INTO CATEGORIA VALUES (4, "Desinfectantes");
+
+INSERT INTO PRODUCTO VALUES (1, "Omo", 2990, "Detergente para lavado de ropa color", 1, 1);
+INSERT INTO PRODUCTO VALUES (2, "Loreal", 3500, "Shampoo pelo delicado", 2, 1);
+INSERT INTO PRODUCTO VALUES (3, "Family Care", 1990, "Jabon para lavado de manos", 3, 1);
+INSERT INTO PRODUCTO VALUES (4, "Lysoform", 2490, "Desinfectante ambientes", 4, 1);
