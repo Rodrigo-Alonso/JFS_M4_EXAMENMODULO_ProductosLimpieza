@@ -30,11 +30,13 @@ public class FindUser extends HttpServlet {
 			dto = facade.obtenerUsuarioByEmail(email);
 
 			if (dto != null && email.contentEquals(dto.getCorreoUsuario())) {
-				request.setAttribute("email", email);
-				request.getRequestDispatcher("/editPassword").forward(request, response);
+				
+				request.setAttribute("name", dto.getNombreUsuario());
+				request.setAttribute("email", dto.getCorreoUsuario());
+				request.getRequestDispatcher("EditPassword.jsp").forward(request, response);
 			} else {
 				out.println("<script type=\"text/javascript\">");
-				out.println("alert('Usuario o password incorrecto!');");
+				out.println("alert('Usuario no encontrado!');");
 				out.println("location='Login.jsp';");
 				out.println("</script>");
 			}

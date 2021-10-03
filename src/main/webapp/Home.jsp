@@ -187,56 +187,6 @@
 		</div>
 	</div>
 
-
-	<!-- Opciones -->
-	<!--  
-	<section class="container my-5">
-		<div class="py-5">
-			<h1 class="text-center">Seleccione una opcion que desea realizar</h1>
-		</div>
-		<div class="row">
-			<div class="col px-0 py-4">
-				<div class="card text-center shadow mx-0" style="width: 18rem;">
-					<i class="fas fa-clipboard-list card-img-top fa-5x p-3 text-muted"></i>
-					<div class="card-body">
-						<h5 class="card-title">Listar Productos</h5>
-						<p class="card-text">Liste todos los productos que estan disponibles</p>
-						<div class="d-grid gap-2">
-							<button type="submit" class="btn btn-success" type="button">Ingresar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col px-0 py-4">
-				<div class="card text-center shadow mx-0" style="width: 18rem;">
-					<i class="fas fa-plus card-img-top fa-5x p-3 text-muted"></i>
-					<div class="card-body">
-						<h5 class="card-title">Ingresar Productos</h5>
-						<p class="card-text">Ingrese un nuevo producto al listado</p>
-						<div class="d-grid gap-2">
-							<button type="submit" class="btn btn-success" type="button">Ingresar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col px-0 py-4">
-				<div class="card text-center shadow mx-0" style="width: 18rem;">
-					<i class="far fa-edit card-img-top fa-5x p-3 text-muted"></i>
-					<div class="card-body">
-						<h5 class="card-title">Editar/Eliminar Producto</h5>
-						<p class="card-text">Edite o elimine alguno de los productos que esten en el listado</p>
-						<div class="d-grid gap-2">
-							<button type="submit" class="btn btn-success" type="button">Ingresar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	-->
-
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

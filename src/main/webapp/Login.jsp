@@ -158,21 +158,21 @@
 				</div>
 
 				<div class="modal-body">
-					<form action="addUser" method="POST">
+					<form action="findUser" method="POST">
 						<div>
 							<div>
-								<h3 class="text-center">Ingrese correo del usuario a buscar</h3>
+								<h4 class="text-center py-3">Ingrese correo del usuario a buscar</h4>
 							</div>
 							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Nombre</span> <input
-									type="text" class="form-control" placeholder="Homero Simpson"
-									name="name">
+								<span class="input-group-text" id="basic-addon1">Correo</span> <input
+									type="email" class="form-control" placeholder="homero@mail.com"
+									name="email">
 							</div>
 						</div>
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
 							<button type="button" class="btn btn-light"
 								data-bs-dismiss="modal">Cancelar</button>
-							<button type="submit" class="btn btn-dark">Guardar</button>
+							<button type="submit" class="btn btn-dark">Buscar</button>
 						</div>
 					</form>
 				</div>
