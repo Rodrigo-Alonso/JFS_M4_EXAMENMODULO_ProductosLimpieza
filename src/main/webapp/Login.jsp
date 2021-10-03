@@ -11,6 +11,20 @@
 	rel="stylesheet"
 	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
 	crossorigin="anonymous">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+	rel="stylesheet">
+
+<!--FontAwesome CDN-->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+	integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+	crossorigin="anonymous">
+
 <title>Login</title>
 </head>
 
@@ -47,10 +61,12 @@
 							<div class="container pt-5 px-0">
 								<div class="row">
 									<div class="col text-start">
-										<button type="button" class="btn">>Olvido de Clave</button>
+										<button type="button" class="btn" data-bs-toggle="modal"
+											data-bs-target="#findModal">>Olvido de Clave</button>
 									</div>
 									<div class="col text-end">
-										<button type="button" class="btn">>Agregar Usuario</button>
+										<button type="button" class="btn" data-bs-toggle="modal"
+											data-bs-target="#addModal">>Agregar Usuario</button>
 									</div>
 								</div>
 							</div>
@@ -61,6 +77,108 @@
 			<div class="col"></div>
 		</div>
 	</section>
+
+	<!-- MODAL ADD -->
+	<div class="modal fade" id="addModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-10 ps-5">
+								<h5 class="modal-title text-center ps-3 mt-3" id="title">Agregar
+									Usuario</h5>
+							</div>
+							<div
+								class="col-sm-2 d-grid gap-2 d-md-flex justify-content-md-end">
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-body">
+					<form action="addUser" method="POST">
+						<div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Nombre</span> <input
+									type="text" class="form-control" placeholder="Homero Simpson"
+									name="name">
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Correo</span> <input
+									type="email" class="form-control" placeholder="homero@mail.com"
+									name="email">
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Telefono</span>
+								<input type="text" class="form-control" placeholder="+569"
+									name="phone">
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Password</span>
+								<input type="password" class="form-control"
+									placeholder="**********" name="password">
+							</div>
+						</div>
+						<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+							<button type="button" class="btn btn-light"
+								data-bs-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-dark">Guardar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL FIND -->
+	<div class="modal fade" id="findModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-10 ps-5">
+								<h5 class="modal-title text-center ps-3 mt-3" id="title">Buscar
+									Usuario</h5>
+							</div>
+							<div
+								class="col-sm-2 d-grid gap-2 d-md-flex justify-content-md-end">
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-body">
+					<form action="addUser" method="POST">
+						<div>
+							<div>
+								<h3 class="text-center">Ingrese correo del usuario a buscar</h3>
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Nombre</span> <input
+									type="text" class="form-control" placeholder="Homero Simpson"
+									name="name">
+							</div>
+						</div>
+						<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+							<button type="button" class="btn btn-light"
+								data-bs-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-dark">Guardar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script

@@ -8,7 +8,5 @@
 </head>
 <body>
 
-	<h1>Agregar Producto</h1>
-
 </body>
 </html>

@@ -143,7 +143,7 @@
 				</div>
 
 				<div class="modal-body">
-					<form th:action="@{/addLibro}" modelAttribute="libro" method="POST">
+					<form action="addLibro" modelAttribute="libro" method="POST">
 						<div>
 							<div class="input-group mb-3">
 								<span class="input-group-text" id="basic-addon1">Titulo</span> <input

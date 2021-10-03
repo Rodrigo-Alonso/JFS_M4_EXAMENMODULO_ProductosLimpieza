@@ -22,7 +22,7 @@ public class AdministradorConexion {
 		String pwd = "";
 		String driver = "org.sqlite.JDBC";
 		String url =
-				"jdbc:sqlite:/home/verdata/eclipse-workspace/M4_EXAMENFINAL_productosLimpieza/productosLimpieza_DDBB";
+				"jdbc:sqlite:/home/verdata/eclipse-workspace/M4_EXAMENMODULO_productosLimpieza/productosLimpieza_DDBB";
 
 		try {
 			Class.forName(driver);
