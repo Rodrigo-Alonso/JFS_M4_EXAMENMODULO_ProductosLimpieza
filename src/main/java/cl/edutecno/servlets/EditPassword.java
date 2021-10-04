@@ -1,7 +1,6 @@
 package cl.edutecno.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +17,6 @@ public class EditPassword extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		PrintWriter out = response.getWriter();
 		
 		String[] email = request.getParameterMap().get("email");
 		String password = request.getParameter("password");

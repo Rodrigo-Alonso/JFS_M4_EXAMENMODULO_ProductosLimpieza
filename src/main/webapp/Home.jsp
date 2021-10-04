@@ -47,12 +47,15 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
-					<a class="nav-link active" aria-current="page" href="Home.jsp">Home</a>
-					<a class="nav-link" href="ListProduct.jsp">Listar Producto</a> <a
-						class="nav-link" href="AddProduct.jsp">Ingresar Productos</a> <a
-						class="nav-link" href="EditProduct.jsp">Editar Productos</a>
-				</div>
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="listarProductos">Home</a></li>
+				</ul>
+				<span class="navbar-text"><c:out value="Usuario: ${user}" /></span>
+				<ul class="d-flex mb-0">
+					<li class="navbar-nav me-auto mb-2 mb-lg-0"><a
+						class="nav-link text-end" href="Login.jsp">Logout</a></li>
+				</ul>
 			</div>
 		</div>
 	</nav>
@@ -67,10 +70,10 @@
 		<div class="row">
 			<div class="col">
 				<div class="">
-					<button type="button" class="btn btn-success me-md-2"
-						data-bs-toggle="modal" data-bs-target="#addModal">
+					<a type="button" class="btn btn-success me-md-2"
+						href="processProduct">
 						<i class="fas fa-plus"> Agregar Producto</i>
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -103,7 +106,7 @@
 							href="editarProducto?idProducto=${var.getIdProducto()}"
 							class="btn btn-primary btn-sm mx-2"><i
 								class="fas fa-edit fa-1x mx-1"></i></a> <a
-							href="eliminarProducto?idProducto=${var.getIdProducto()}"
+							href="deleteProduct?idProducto=${var.getIdProducto()}"
 							class="btn btn-danger btn-sm mx-1"><i
 								class="fas fa-trash-alt fa-1x mx-1"></i></a></td>
 					</tr>
@@ -111,81 +114,6 @@
 			</tbody>
 		</table>
 	</section>
-
-
-	<!-- MODAL ADD -->
-	<div class="modal fade" id="addModal" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div
-			class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-10 ps-5">
-								<h5 class="modal-title text-center ps-3 mb-3" id="title">Agregar
-									Producto</h5>
-							</div>
-							<div
-								class="col-sm-2 d-grid gap-2 d-md-flex justify-content-md-end">
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<img src="/assets/img/libro.png"
-									class="card-img-top mx-auto d-block" alt="libro"
-									style="width: 250px; height: auto;">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="modal-body">
-					<form action="addLibro" modelAttribute="libro" method="POST">
-						<div>
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Titulo</span> <input
-									type="text" class="form-control" placeholder="Titulo Libro"
-									name="titulo" id="titulo">
-							</div>
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Autor</span> <input
-									type="text" class="form-control" placeholder="Autor Libro"
-									name="autor" id="autor">
-							</div>
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Año</span> <input
-									type="text" class="form-control" placeholder="2021" name="anio"
-									id="anio">
-							</div>
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Imprenta</span>
-								<input type="text" class="form-control"
-									placeholder="Imprenta S.A." name="imprenta" id="imprenta">
-							</div>
-							<div class="mb-3">
-								<div class="input-group mb-3">
-									<label class="input-group-text" for="inputGroupSelect01">Seleccione
-										Disponibilidad</label> <select class="form-select" name="disponible"
-										id="disponible">
-										<option value="1">Disponible</option>
-										<option value="2">No Disponible</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-							<button type="button" class="btn btn-light"
-								data-bs-dismiss="modal">Cancelar</button>
-							<button type="submit" class="btn btn-dark">Guardar</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script

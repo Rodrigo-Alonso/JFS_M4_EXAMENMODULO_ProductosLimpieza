@@ -32,8 +32,11 @@ public class ProcesaLogin extends HttpServlet {
 
 			if (dto != null && email.contentEquals(dto.getCorreoUsuario())
 					&& pass.contentEquals(dto.getPassUsuario())) {
-				HttpSession sesionUsuario = request.getSession();
-				sesionUsuario.setAttribute("user", email);
+				HttpSession sesionUsuario = request.getSession(true);
+				sesionUsuario.setAttribute("email", dto.getCorreoUsuario());
+				sesionUsuario.setAttribute("id", dto.getIdUsuario());
+				sesionUsuario.setAttribute("user", dto.getNombreUsuario());
+				
 				request.getRequestDispatcher("/listarProductos").forward(request, response);
 			} else {
 				out.println("<script type=\"text/javascript\">");

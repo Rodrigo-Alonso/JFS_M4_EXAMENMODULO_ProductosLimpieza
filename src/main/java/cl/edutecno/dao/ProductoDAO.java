@@ -13,6 +13,7 @@ public class ProductoDAO extends AdministradorConexion {
 
 	// Constructor
 	public ProductoDAO() {
+		@SuppressWarnings("unused")
 		Connection conn = generaPoolConexion();
 	}
 
@@ -66,7 +67,7 @@ public class ProductoDAO extends AdministradorConexion {
 		return status;
 	}
 	
-	public int delete(ProductoDTO productoDTO) {
+	public int delete(Integer id) {
 		
 		int status = 0;
 		
@@ -74,7 +75,7 @@ public class ProductoDAO extends AdministradorConexion {
 			
 			PreparedStatement ps = conn.prepareStatement("DELETE FROM PRODUCTO WHERE ID_PRODUCTO=?");
 			
-			ps.setInt(1, productoDTO.getIdProducto());
+			ps.setInt(1, id);
 			
 			status = ps.executeUpdate();
 			
@@ -112,6 +113,35 @@ public class ProductoDAO extends AdministradorConexion {
 		
 		return listaProductos;
 		
+	}
+	
+	public static ProductoDTO getProductById(Integer idProducto) {
+
+		ProductoDTO productoDTO = null;
+
+		try {
+
+			PreparedStatement ps = conn.prepareStatement(
+					"SELECT * FROM PRODUCTO WHERE ID_PRODUCTO=?");
+
+			ps.setInt(1, idProducto);
+			ResultSet rs = ps.executeQuery();
+			
+			while (rs.next()) {
+				productoDTO = new ProductoDTO();
+				productoDTO.setIdProducto(rs.getInt("ID_USUARIO"));
+				productoDTO.setNombreProducto(rs.getString("NOMBRE_PRODUCTO"));
+				productoDTO.setPrecioProducto(rs.getInt("PRECIO_PRODUCTO"));
+				productoDTO.setDescripcionProducto(rs.getString("DESCRIPCION_PRODUCTO"));
+				productoDTO.setIdCategoria(rs.getInt("ID_CATEGORIA"));
+				productoDTO.setIdUsuario(rs.getInt("ID_USUARIO"));
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return productoDTO;
 	}
 
 }

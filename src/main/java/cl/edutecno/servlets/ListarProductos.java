@@ -48,7 +48,39 @@ public class ListarProductos extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
+		Facade facade = new Facade();
+
+		try {
+			// Obtiene datos
+			List<ProductoDTO> listaProductos = null;
+			try {
+				listaProductos = facade.listarProductos();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			List<CategoriaDTO> listaCategorias = null;
+			try {
+				listaCategorias = facade.listarCategorias();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			// Envio de datos
+			request.setAttribute("listaProductos", listaProductos);
+			request.setAttribute("listaCategorias", listaCategorias);
+
+			// Redirecciona a .jsp
+			request.getRequestDispatcher("Home.jsp").forward(request, response);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
