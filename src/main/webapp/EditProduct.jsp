@@ -74,28 +74,28 @@
 					<div class="row g-0">
 						<div class="col-md-4">
 							<img src="${pageContext.request.contextPath}/assets/img/logo.png"
-								class="img-fluid rounded-start mt-5 pt-4" alt="imgAddProduct"
-								>
+								class="img-fluid rounded-start mt-5 pt-4" alt="imgAddProduct">
 						</div>
 						<div class="col-md-8">
 							<div class="card-body">
-								<form action="addProduct" method="POST">
+								<form action="editProduct" method="POST">
 									<div>
-										<h5 class="card-title">Ingrese los siguienstes datos</h5>
+										<h5 class="card-title">Modifique los siguientes datos</h5>
+										<input type="hidden" name="idProduct" value="${producto.idProducto}"/>
 										<div class="input-group mb-3">
 											<span class="input-group-text" id="basic-addon1">Nombre</span>
-											<input type="text" class="form-control"
-												placeholder="Nombre Producto" name="name">
+											<input type="text" class="form-control" name="name"
+												value="${producto.nombreProducto}">
 										</div>
 										<div class="input-group mb-3">
 											<span class="input-group-text" id="basic-addon1">Precio</span>
-											<input type="number" class="form-control"
-												placeholder="$1.990" name="price">
+											<input type="number" class="form-control" name="price"
+												value="${producto.precioProducto}">
 										</div>
 										<div class="input-group mb-3">
 											<span class="input-group-text" id="basic-addon1">Descripcion</span>
-											<textarea class="form-control"
-												placeholder="Descripcion del producto..." name="description"></textarea>
+											<textarea class="form-control" name="description"
+												>${producto.descripcionProducto}</textarea>
 										</div>
 										<div class="mb-3">
 											<div class="input-group mb-3">
@@ -109,8 +109,7 @@
 										</div>
 									</div>
 									<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-										<button type="button" class="btn btn-light"
-											data-bs-dismiss="modal">Cancelar</button>
+										<a type="button" class="btn btn-light" href="listarProductos">Cancelar</a>
 										<button type="submit" class="btn btn-dark">Guardar</button>
 									</div>
 								</form>

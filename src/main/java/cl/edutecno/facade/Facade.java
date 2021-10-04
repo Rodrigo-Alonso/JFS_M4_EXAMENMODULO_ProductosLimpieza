@@ -54,7 +54,7 @@ public class Facade {
 		CategoriaDAO dao = new CategoriaDAO();
 		return dao.list();
 	}
-	
+
 	@SuppressWarnings("static-access")
 	public ProductoDTO obtenerProductoById(Integer idProducto) {
 		ProductoDAO dao = new ProductoDAO();

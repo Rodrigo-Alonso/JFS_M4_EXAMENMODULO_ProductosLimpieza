@@ -31,6 +31,7 @@ INSERT INTO CATEGORIA VALUES (1, "Detergentes");
 INSERT INTO CATEGORIA VALUES (2, "Shampoos");
 INSERT INTO CATEGORIA VALUES (3, "Jabones");
 INSERT INTO CATEGORIA VALUES (4, "Desinfectantes");
+INSERT INTO CATEGORIA VALUES (5, "Limpiavidrios");
 
 INSERT INTO PRODUCTO VALUES (1, "Omo", 2990, "Detergente para lavado de ropa color", 1, 1);
 INSERT INTO PRODUCTO VALUES (2, "Loreal", 3500, "Shampoo pelo delicado", 2, 1);

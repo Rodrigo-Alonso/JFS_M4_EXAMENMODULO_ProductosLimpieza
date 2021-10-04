@@ -74,14 +74,13 @@
 					<div class="row g-0">
 						<div class="col-md-4">
 							<img src="${pageContext.request.contextPath}/assets/img/logo.png"
-								class="img-fluid rounded-start mt-5 pt-4" alt="imgAddProduct"
-								>
+								class="img-fluid rounded-start mt-5 pt-4" alt="imgAddProduct">
 						</div>
 						<div class="col-md-8">
 							<div class="card-body">
 								<form action="addProduct" method="POST">
 									<div>
-										<h5 class="card-title">Ingrese los siguienstes datos</h5>
+										<h5 class="card-title">Ingrese los siguientes datos</h5>
 										<div class="input-group mb-3">
 											<span class="input-group-text" id="basic-addon1">Nombre</span>
 											<input type="text" class="form-control"
@@ -109,8 +108,8 @@
 										</div>
 									</div>
 									<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-										<button type="button" class="btn btn-light"
-											data-bs-dismiss="modal">Cancelar</button>
+										<a type="button" class="btn btn-light"
+											href="listarProductos">Cancelar</a>
 										<button type="submit" class="btn btn-dark">Guardar</button>
 									</div>
 								</form>
@@ -123,76 +122,6 @@
 		</div>
 	</section>
 
-
-
-
-	<!-- MODAL ADD -->
-	<div class="modal fade" id="addModal" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div
-			class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-10 ps-5">
-								<h5 class="modal-title text-center ps-3 mb-3" id="title">Agregar
-									Producto</h5>
-							</div>
-							<div
-								class="col-sm-2 d-grid gap-2 d-md-flex justify-content-md-end">
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<img src="/assets/img/libro.png"
-									class="card-img-top mx-auto d-block" alt="libro"
-									style="width: 250px; height: auto;">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="modal-body">
-					<form action="addLibro" modelAttribute="libro" method="POST">
-						<div>
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Nombre</span> <input
-									type="text" class="form-control" placeholder="Titulo Libro"
-									name="name">
-							</div>
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Precio</span> <input
-									type="text" class="form-control" placeholder="Autor Libro"
-									name="price">
-							</div>
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="basic-addon1">Descripcion</span>
-								<textarea class="form-control"
-									placeholder="Descripcion del producto" name="description"></textarea>
-							</div>
-							<div class="mb-3">
-								<div class="input-group mb-3">
-									<label class="input-group-text" for="inputGroupSelect01">Seleccione
-										Categoria</label> <select class="form-select" name="category">
-										<option value="1">Disponible</option>
-										<option value="2">No Disponible</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-							<button type="button" class="btn btn-light"
-								data-bs-dismiss="modal">Cancelar</button>
-							<button type="submit" class="btn btn-dark">Guardar</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script

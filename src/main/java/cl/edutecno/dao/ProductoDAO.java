@@ -129,7 +129,7 @@ public class ProductoDAO extends AdministradorConexion {
 			
 			while (rs.next()) {
 				productoDTO = new ProductoDTO();
-				productoDTO.setIdProducto(rs.getInt("ID_USUARIO"));
+				productoDTO.setIdProducto(rs.getInt("ID_PRODUCTO"));
 				productoDTO.setNombreProducto(rs.getString("NOMBRE_PRODUCTO"));
 				productoDTO.setPrecioProducto(rs.getInt("PRECIO_PRODUCTO"));
 				productoDTO.setDescripcionProducto(rs.getString("DESCRIPCION_PRODUCTO"));

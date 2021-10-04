@@ -161,7 +161,8 @@
 					<form action="findUser" method="POST">
 						<div>
 							<div>
-								<h4 class="text-center py-3">Ingrese correo del usuario a buscar</h4>
+								<h4 class="text-center py-3">Ingrese correo del usuario a
+									buscar</h4>
 							</div>
 							<div class="input-group mb-3">
 								<span class="input-group-text" id="basic-addon1">Correo</span> <input

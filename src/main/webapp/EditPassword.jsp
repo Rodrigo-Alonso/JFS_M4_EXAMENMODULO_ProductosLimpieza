@@ -24,7 +24,7 @@
 	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
 	integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
 	crossorigin="anonymous">
-	
+
 <title>Edit Password</title>
 </head>
 <body>
@@ -43,19 +43,22 @@
 						</div>
 						<div class="card-body px-4">
 							<div>
-								<h2 class="pb-2"><c:out value="Crea una nueva clave para el usuario ${name}"/></h2>
+								<h2 class="pb-2">
+									<c:out value="Crea una nueva clave para el usuario ${name}" />
+								</h2>
 							</div>
 							<div class="mb-3">
 								<input type="hidden" name="email" value="${param.email}">
 								<label for="text" class="form-label">Usuario</label> <input
-									type="email" class="form-control" name="email2" value="${email}" disabled/>
+									type="email" class="form-control" name="email2"
+									value="${email}" disabled />
 								<div id="userHelp" class="form-text">No compartas tu
 									usuario con nadie</div>
 							</div>
 							<div class="mb-3">
-								<label for="exampleInputPassword1" class="form-label">Nueva Password</label>
-								<input type="password" class="form-control" id="password"
-									placeholder="*********" name="password" required>
+								<label for="exampleInputPassword1" class="form-label">Nueva
+									Password</label> <input type="password" class="form-control"
+									id="password" placeholder="*********" name="password" required>
 							</div>
 							<div class="d-grid gap-2">
 								<button type="submit" class="btn btn-success" type="button">Ingresar</button>
@@ -67,7 +70,7 @@
 			<div class="col"></div>
 		</div>
 	</section>
-	
+
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

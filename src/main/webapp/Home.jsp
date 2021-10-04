@@ -70,8 +70,7 @@
 		<div class="row">
 			<div class="col">
 				<div class="">
-					<a type="button" class="btn btn-success me-md-2"
-						href="processProduct">
+					<a type="button" class="btn btn-success me-md-2" href="addProduct">
 						<i class="fas fa-plus"> Agregar Producto</i>
 					</a>
 				</div>
@@ -102,8 +101,7 @@
 								<td>${var2.getNombreCategoria()}</td>
 							</c:if>
 						</c:forEach>
-						<td><a
-							href="editarProducto?idProducto=${var.getIdProducto()}"
+						<td><a href="editProduct?idProducto=${var.getIdProducto()}"
 							class="btn btn-primary btn-sm mx-2"><i
 								class="fas fa-edit fa-1x mx-1"></i></a> <a
 							href="deleteProduct?idProducto=${var.getIdProducto()}"

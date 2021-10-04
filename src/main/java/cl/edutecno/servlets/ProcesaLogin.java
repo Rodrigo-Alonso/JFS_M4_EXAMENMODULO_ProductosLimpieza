@@ -36,7 +36,7 @@ public class ProcesaLogin extends HttpServlet {
 				sesionUsuario.setAttribute("email", dto.getCorreoUsuario());
 				sesionUsuario.setAttribute("id", dto.getIdUsuario());
 				sesionUsuario.setAttribute("user", dto.getNombreUsuario());
-				
+
 				request.getRequestDispatcher("/listarProductos").forward(request, response);
 			} else {
 				out.println("<script type=\"text/javascript\">");
